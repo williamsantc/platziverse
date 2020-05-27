@@ -1,0 +1,22 @@
+{
+  "name": "platziverse-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "express": "^4.17.1"
+  }
+}

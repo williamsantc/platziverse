@@ -1,0 +1,36 @@
+{
+  "name": "platziverse-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "cross-env DEBUG=platziverse:* node setup.js",
+    "example": "cross-env DEBUG=platziverse:* node examples/",
+    "test": "cross-env DEBUG=platziverse:* ava tests/* --verbose",
+    "test:coverage": "cross-env DEBUG=platziverse:* nyc --reporter=lcov ava tests/* --verbose",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^3.8.2",
+    "nyc": "^15.0.1",
+    "proxyquire": "^2.1.3",
+    "sinon": "^9.0.2",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "defaults": "^1.0.3",
+    "inquirer": "^7.1.0",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "platziverse-common": "file:../platziverse-common",
+    "sequelize": "^5.21.10",
+    "sqlite3": "^4.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "platziverse-mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server.js",
+    "start:dev": "cross-env DEBUG=platziverse:* node server.js",
+    "start:dev:watch": "cross-env DEBUG=platziverse:* nodemon server.js",
+    "client": "cross-env DEBUG=platziverse:* node client.js",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "aedes": "^0.42.0",
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "mqtt": "^4.1.0",
+    "platziverse-common": "file:../platziverse-common",
+    "platziverse-db": "file:../platziverse-db",
+    "redis": "^3.0.2"
+  }
+}

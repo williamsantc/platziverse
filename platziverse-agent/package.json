@@ -1,0 +1,27 @@
+{
+  "name": "platziverse-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "example": "cross-env DEBUG=platziverse:* node examples/",
+    "start:dev": "cross-env DEBUG=platziverse:* node index.js",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "debug": "^4.1.1",
+    "defaults": "^1.0.3",
+    "mqtt": "^4.1.0",
+    "platziverse-common": "file:../platziverse-common",
+    "uuid": "^8.1.0"
+  }
+}
