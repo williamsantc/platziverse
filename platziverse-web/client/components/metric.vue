@@ -52,7 +52,7 @@ export default {
       this.color = randomColor.getColor()
       let result
       try {
-        result = await axios.get(`${serverHost}/metrics/${uuid}/${type}`)
+        result = await axios.get(`${serverUrl}/metrics/${uuid}/${type}`)
       } catch(e) {
         this.error = e.error.error
         return

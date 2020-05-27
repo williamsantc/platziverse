@@ -13,7 +13,7 @@ const PlatziverseAgent = require('platziverse-agent')
 const apiProxy = require('./proxy')
 
 const port = process.env.PORT || 8080
-const www = process.env.WWW || 'public'
+const www = process.env.WWW || '../public'
 
 const app = express()
 const server = http.Server(app)
@@ -23,7 +23,6 @@ const agent = new PlatziverseAgent()
 app.use(express.static(path.join(__dirname, www)))
 debug(`serving ${www}`)
 app.use('/', apiProxy)
-
 
 app.use((err, req, res, next) => {
   debug(`Error: ${err.message}`)

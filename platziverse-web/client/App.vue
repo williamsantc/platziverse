@@ -34,11 +34,10 @@ export default {
     async initialize() {
       let result;
       try {
-        console.log(serverUrl)
-        result = await axios.get(`${serverHost}/agents`);
+        result = await axios.get(`${serverUrl}/agents`);
       } catch (e) {
         console.log(e)
-        this.error = e.error.error;
+        this.error = e.error;
         return;
       }
       this.agents = result;

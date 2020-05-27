@@ -98,7 +98,7 @@ export default {
       const { uuid } = this
       let agent
       try {
-        agent = await axios.get(`${serverHost}/agent/${uuid}`)
+        agent = await axios.get(`${serverUrl}/agent/${uuid}`)
       } catch (e) {
         this.error = e.error.error
         return
@@ -113,7 +113,7 @@ export default {
       const { uuid } = this
       let metrics
       try {
-        metrics = await axios.get(`${serverHost}/metrics/${uuid}`)
+        metrics = await axios.get(`${serverUrl}/metrics/${uuid}`)
       } catch(e) {
         this.error = e.error.error
         return

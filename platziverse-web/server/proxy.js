@@ -10,26 +10,57 @@ const api = express.Router()
 const options = {
   headers: {
     Authorization: `Bearer ${apiToken}`
-  },
+  }
 }
 
 api.get('/agents', async (req, response, next) => {
-
   let result
   try {
     result = await axios.get(`${endpoint}/api/agents`, options)
   } catch (e) {
-    console.log(e)
     return next(e)
   }
-  
-  response.send(result)
- })
 
-api.get('/agents/:uuid', (req, response) => { })
+  response.send(result.data)
+})
 
-api.get('/metrics/:uuid', (req, response) => { })
+api.get('/agents/:uuid', async (req, response, next) => {
+  const { uuid } = req.params
 
-api.get('/metrics/:uuid/:type', (req, response) => { })
+  let result
+  try {
+    result = await axios.get(`${endpoint}/api/agents/${uuid}`, options)
+  } catch (e) {
+    return next(e)
+  }
+
+  response.send(result.data)
+})
+
+api.get('/metrics/:uuid', async (req, response, next) => {
+  const { uuid } = req.params
+
+  let result
+  try {
+    result = await axios.get(`${endpoint}/api/metrics/${uuid}`, options)
+  } catch (e) {
+    return next(e)
+  }
+
+  response.send(result.data)
+})
+
+api.get('/metrics/:uuid/:type', async (req, response, next) => {
+  const { uuid, type } = req.params
+
+  let result
+  try {
+    result = await axios.get(`${endpoint}/api/metrics/${uuid}/${type}`, options)
+  } catch (e) {
+    return next(e)
+  }
+
+  response.send(result.data)
+})
 
 module.exports = api
