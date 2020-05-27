@@ -17,7 +17,7 @@ router.use('*', async (req, res, next) => {
 })
 
 router.get('/agents', auth({ secret }), async (req, res, next) => {
-  debug('Request to /agents')
+  debug('Incoming request to /agents')
 
   if (!req.user) {
     return next(new Error('Unathorized'))
@@ -37,7 +37,9 @@ router.get('/agents', auth({ secret }), async (req, res, next) => {
 })
 
 router.get('/agents/:uuid', async (req, res, next) => {
+
   const { uuid } = req.params
+  debug(`Incoming request to /agents/${uuid}`)
 
   let agent
   try {

@@ -59,8 +59,9 @@ export default {
       }
       const labels = []
       const data = []
-      if (Array.isArray(result)) {
-        result.forEach(m => {
+      const metrics = result.data
+      if (Array.isArray(metrics)) {
+        metrics.forEach(m => {
           labels.push(moment(m.createdAt).format('HH:mm:ss'))
           data.push(m.value)
         })

@@ -96,13 +96,14 @@ export default {
   methods: {
     async initialize() {
       const { uuid } = this
-      let agent
+      let result
       try {
-        agent = await axios.get(`${serverUrl}/agent/${uuid}`)
+        result = await axios.get(`${serverUrl}/agents/${uuid}`)
       } catch (e) {
-        this.error = e.error.error
+        this.error = e.error
         return
       }
+      const agent = result.data
       this.name = agent.name
       this.hostname = agent.hostname
       this.connected = agent.connected
@@ -111,14 +112,14 @@ export default {
     },
     async loadMetrics () {
       const { uuid } = this
-      let metrics
+      let result
       try {
-        metrics = await axios.get(`${serverUrl}/metrics/${uuid}`)
+        result = await axios.get(`${serverUrl}/metrics/${uuid}`)
       } catch(e) {
-        this.error = e.error.error
+        this.error = e.error
         return
       }
-      this.metrics = metrics
+      this.metrics = result.data
       this.startRealtime()
     },
     startRealtime () {
