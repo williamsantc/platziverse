@@ -4,6 +4,7 @@ const db = require('../')
 const chalk = require('chalk')
 const debug = require('debug')('platziverse:db:example')
 const { config } = require('platziverse-common/data/db')
+const { handleFatalError } = require('platziverse-common/data/error-handling')
 
 async function run () {
   const exampleConfig = {
@@ -46,12 +47,6 @@ async function run () {
   debug(metricsByTypeAndAgentUuid)
 
   process.exit(0)
-}
-
-function handleFatalError (err) {
-  console.error(`${chalk.red('[error fatal]')} ${err.message}`)
-  console.error(err.stack)
-  process.exit(1)
 }
 
 run()

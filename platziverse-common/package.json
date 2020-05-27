@@ -7,11 +7,17 @@
     "lint": "standard",
     "lint:fix": "standard --fix"
   },
-  "files": ["index.js", "/data", "/fixtures", "/utils"],
+  "files": [
+    "index.js",
+    "/data",
+    "/fixtures",
+    "/utils"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.0.0",
     "lodash": "^4.17.15",
     "standard": "^14.3.4"
   }

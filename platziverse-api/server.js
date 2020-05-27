@@ -1,6 +1,5 @@
 'use strict'
 
-const http = require('http')
 const express = require('express')
 const chalk = require('chalk')
 const debug = require('debug')('platziverse:api')
@@ -10,7 +9,6 @@ const metricsApi = require('./api/routes/metrics')
 
 const port = process.env.PORT || 3000
 const app = express()
-const server = http.createServer(app)
 
 app.use('/api', agentsApi)
 app.use('/api', metricsApi)
@@ -35,7 +33,7 @@ if (!module.parent) {
   process.on('uncaughtException', handleFatalError)
   process.on('unhandledRejection', handleFatalError)
 
-  server.listen(port, () => {
+  app.listen(port, () => {
     debug(`Server listening on port ${chalk.green(port)}`)
   })
 }

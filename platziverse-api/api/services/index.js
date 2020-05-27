@@ -1,7 +1,7 @@
 'use strict'
 
 const db = require('platziverse-db')
-const { db: dbConfig } = require('platziverse-common/data/db')
+const { config: dbConfig } = require('platziverse-common/data/db')
 const debug = require('debug')('platziverse:api:services')
 
 let services

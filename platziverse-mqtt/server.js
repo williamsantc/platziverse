@@ -5,7 +5,8 @@ const chalk = require('chalk')
 const db = require('platziverse-db')
 const aedes = require('aedes')()
 const server = require('net').createServer(aedes.handle)
-const { db: dbConfig } = require('platziverse-common/data/db')
+const { config: dbConfig } = require('platziverse-common/data/db')
+const { handleError, handleFatalError } = require('platziverse-common/data/error-handling')
 const { parsePayload } = require('platziverse-common/utils/events')
 
 const port = 1883
@@ -111,17 +112,6 @@ aedes.on('publish', async (packet, client) => {
 })
 
 aedes.on('clientError', handleFatalError)
-
-function handleFatalError (err) {
-  console.error(`${chalk.red('[fatal error]')} ${err.message}`)
-  console.error(err.stack)
-  process.exit(1)
-}
-
-function handleError (err) {
-  console.error(`${chalk.red('[error]')} ${err.message}`)
-  console.error(err.stack)
-}
 
 process.on('uncaughtException', handleFatalError)
 process.on('unhandledRejection', handleFatalError)

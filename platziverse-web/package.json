@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cross-env NODE_ENV=production node server/",
+    "prestart": "npm run build",
+    "prestart:dev": "npm run build",
+    "prestart:dev:watch": "npm run build",
+    "start:dev": "cross-env DEBUG=platziverse:* node server/",
+    "start:dev:watch": "cross-env DEBUG=platziverse:* nodemon server/",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "build": "webpack --config webpack.config.dev.js"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +22,28 @@
     "standard": "^14.3.4"
   },
   "dependencies": {
+    "@babel/core": "^7.10.0",
+    "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
     "chalk": "^4.0.0",
+    "chart.js": "^2.9.3",
     "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
     "debug": "^4.1.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "moment": "^2.26.0",
+    "platziverse-agent": "file:../platziverse-agent",
+    "platziverse-common": "file:../platziverse-common",
+    "random-material-color": "^1.0.5",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0",
+    "terser-webpack-plugin": "^3.0.2",
+    "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.0",
+    "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
