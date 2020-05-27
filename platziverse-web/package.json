@@ -12,7 +12,7 @@
     "start:dev:watch": "cross-env DEBUG=platziverse:* nodemon server/",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "build": "webpack --config webpack.config.dev.js"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
