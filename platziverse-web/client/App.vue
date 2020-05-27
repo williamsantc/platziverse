@@ -1,6 +1,11 @@
 <template>
   <div>
-    <agent v-for="agent in agents" :uuid="agent.uuid" :key="agent.uuid" :socket="socket"></agent>
+    <agent 
+      v-for="agent in agents" 
+      :uuid="agent.uuid" 
+      :key="agent.uuid" 
+      :socket="socket">
+    </agent>
     <p v-if="error">{{error}}</p>
   </div>
 </template>

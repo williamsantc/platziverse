@@ -1,7 +1,8 @@
 {
   "name": "platziverse-common",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "A Simple IoT Platform - COMMON",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
@@ -13,9 +14,15 @@
     "/fixtures",
     "/utils"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamsantc/platziverse.git"
+  },
+  "author": "William Santos <williamsantc98@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamsantc/platziverse/issues"
+  },
   "dependencies": {
     "chalk": "^4.0.0",
     "lodash": "^4.17.15",

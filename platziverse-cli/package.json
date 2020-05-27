@@ -1,0 +1,19 @@
+{
+  "name": "platziverse-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Simple IoT Platform - CLI",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamsantc/platziverse.git"
+  },
+  "author": "William Santos <williamsantc98@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamsantc/platziverse/issues"
+  }
+}

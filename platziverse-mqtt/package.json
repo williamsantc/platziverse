@@ -1,8 +1,9 @@
 {
   "name": "platziverse-mqtt",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "A Simple IoT Platform - MQTT",
+  "main": "server.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server.js",
     "start:dev": "cross-env DEBUG=platziverse:* node server.js",
@@ -11,9 +12,15 @@
     "lint": "standard",
     "lint:fix": "standard --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamsantc/platziverse.git"
+  },
+  "author": "William Santos <williamsantc98@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamsantc/platziverse/issues"
+  },
   "devDependencies": {
     "nodemon": "^2.0.4",
     "standard": "^14.3.4"
