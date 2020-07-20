@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "standard": "^14.3.4"
   }
 }
