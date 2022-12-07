@@ -37,7 +37,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "debug": "^4.1.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "moment": "^2.26.0",
     "platziverse-agent": "file:../platziverse-agent",
     "platziverse-common": "file:../platziverse-common",
